@@ -11,6 +11,9 @@ dependencies:
   '@apollo/experimental-nextjs-app-support':
     specifier: ^0.8.0
     version: 0.8.0(@apollo/client@3.9.0-rc.1)(next@14.1.2)(react@18.2.0)
+  '@aws-amplify/adapter-nextjs':
+    specifier: ^1.0.27
+    version: 1.0.27(aws-amplify@6.0.26)(next@14.1.2)
   '@aws-amplify/ui-react':
     specifier: ^6.1.6
     version: 6.1.6(@types/react@18.2.21)(aws-amplify@6.0.26)(react-dom@18.2.0)(react@18.2.0)
@@ -178,6 +181,17 @@ packages:
       server-only: 0.0.1
       superjson: 2.2.1
       ts-invariant: 0.10.3
+    dev: false
+
+  /@aws-amplify/adapter-nextjs@1.0.27(aws-amplify@6.0.26)(next@14.1.2):
+    resolution: {integrity: sha512-jWsIrpXAKO+h4QvF/ggMlIhSZPx7H4n4VenYGYdgl5DXGOqr12a7w699SsyfdqGxk0TuAdqCem/ftVNDqI05LQ==}
+    peerDependencies:
+      aws-amplify: ^6.0.7
+      next: '>=13.5.0 <15.0.0'
+    dependencies:
+      aws-amplify: 6.0.26(aws-cdk-lib@2.135.0)(constructs@10.3.0)
+      cookie: 0.5.0
+      next: 14.1.2(@babel/core@7.24.0)(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@aws-amplify/analytics@7.0.26(@aws-amplify/core@6.0.26):
@@ -3348,6 +3362,11 @@ packages:
   /convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
+  /cookie@0.5.0:
+    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+    engines: {node: '>= 0.6'}
+    dev: false
+
   /copy-anything@3.0.5:
     resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
     engines: {node: '>=12.13'}
@@ -6386,6 +6405,7 @@ packages:
 
   /tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+    requiresBuild: true
     dev: false
 
   /ts-api-utils@1.2.1(typescript@5.2.2):
@@ -6635,10 +6655,12 @@ packages:
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+    requiresBuild: true
     dev: false
 
   /whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+    requiresBuild: true
     dependencies:
       tr46: 0.0.3
       webidl-conversions: 3.0.1

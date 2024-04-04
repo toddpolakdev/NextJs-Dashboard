@@ -7,11 +7,11 @@ import type { WithAuthenticatorProps } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 // import ConfigureAmplifyClientSide from '@/components/ConfigureAmplify';
 
-export function Customers({ signOut, user }: WithAuthenticatorProps) {
+function Customers({ signOut, user }: WithAuthenticatorProps) {
   console.log('Amplify', Amplify);
-  Amplify.configure(config, {
-    ssr: true, // required when using Amplify with Next.js
-  });
+  // Amplify.configure(config, {
+  //   ssr: true, // required when using Amplify with Next.js
+  // });
   // Amplify.configure(config);
   console.log('config', config);
 

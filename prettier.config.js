@@ -1,6 +1,6 @@
-const styleguide = require('@vercel/style-guide/prettier');
+import styleguide, { plugins as _plugins } from '@vercel/style-guide/prettier';
 
-module.exports = {
+export default {
   ...styleguide,
-  plugins: [...styleguide.plugins, 'prettier-plugin-tailwindcss'],
+  plugins: [..._plugins, 'prettier-plugin-tailwindcss'],
 };

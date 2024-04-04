@@ -1,0 +1,34 @@
+'use client';
+
+import { useEffect } from 'react';
+import { Amplify } from 'aws-amplify';
+import config from '../../../src/aws-exports';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import type { WithAuthenticatorProps } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+
+const Customers = ({ signOut, user }: WithAuthenticatorProps) => {
+  console.log('Amplify', Amplify);
+  Amplify.configure(config, {
+    ssr: true, // required when using Amplify with Next.js
+  });
+  console.log('config', config);
+
+  useEffect(() => {
+    console.log('Amplify', Amplify);
+  }, []);
+
+  return (
+    <div>
+      <h1>Customers</h1>
+      <>
+        {user && <h1>Welcome, {user.username}!</h1>}
+
+        <button onClick={() => signOut && signOut()}>Sign out</button>
+      </>
+    </div>
+  );
+};
+
+
+export default withAuthenticator(Customers);

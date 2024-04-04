@@ -7,6 +7,7 @@ import {
   HomeIcon,
   DocumentDuplicateIcon,
   WrenchScrewdriverIcon,
+  BuildingStorefrontIcon,
 } from '@heroicons/react/24/outline';
 
 // Map of links to display in the side navigation.
@@ -20,8 +21,18 @@ const links = [
   },
   { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
   {
-    name: 'Restaurants',
-    href: '/dashboard/restaurants',
+    name: 'Technologies',
+    href: '/dashboard/technologies/cms',
+    icon: WrenchScrewdriverIcon,
+  },
+  {
+    name: 'Builder Demo',
+    href: '/builder-demo',
+    icon: BuildingStorefrontIcon,
+  },
+  {
+    name: 'Builder Test Page',
+    href: '/test-page',
     icon: WrenchScrewdriverIcon,
   },
 ];
